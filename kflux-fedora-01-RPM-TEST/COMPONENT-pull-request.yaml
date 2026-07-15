@@ -41,16 +41,16 @@ spec:
     - name: strictArch
       value: "false"
     - name: self-ref-url
-      value: "https://gitlab.com/fedora/infrastructure/konflux/rpmbuild-pipeline"
+      value: RPM_PIPELINE_URL
     - name: self-ref-revision
-      value: "7ffafbcd805b49836dd8f68dd3ddfae56d7831dc"
+      value: RPM_PIPELINE_REVISION
   pipelineRef:
     resolver: git
     params:
       - name: url
-        value: https://gitlab.com/fedora/infrastructure/konflux/rpmbuild-pipeline
+        value: RPM_PIPELINE_URL
       - name: revision
-        value: "7ffafbcd805b49836dd8f68dd3ddfae56d7831dc"
+        value: RPM_PIPELINE_REVISION
       - name: pathInRepo
         value: pipeline/build-rpm-package.yaml
   taskRunTemplate:
