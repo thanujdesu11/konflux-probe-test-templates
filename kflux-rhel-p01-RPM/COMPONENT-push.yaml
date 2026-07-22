@@ -34,16 +34,16 @@ spec:
     - name: ociStorage
       value: "quay.io/redhat-user-workloads/$(context.taskRun.namespace)/COMPONENT:$(params.revision)"
     - name: self-ref-url
-      value: "{{ RPM_PIPELINE_URL }}"
+      value: RPM_PIPELINE_URL
     - name: self-ref-revision
-      value: "{{ RPM_PIPELINE_REVISION }}"
+      value: RPM_PIPELINE_REVISION
   pipelineRef:
     resolver: git
     params:
       - name: url
-        value: "{{ RPM_PIPELINE_URL }}"
+        value: RPM_PIPELINE_URL
       - name: revision
-        value: "{{ RPM_PIPELINE_REVISION }}"
+        value: RPM_PIPELINE_REVISION
       - name: pathInRepo
         value: pipeline/build-rhel-package.yaml
   taskRunTemplate:
